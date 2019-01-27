@@ -10,17 +10,17 @@ dofile(modpath.."/nodes.lua")
 dofile(modpath.."/oregen.lua")
 dofile(modpath.."/crafts.lua")
 
+-- moretrees + v7 = !rubber
 -- Rubber trees, moretrees also supplies these
-if not minetest.get_modpath("moretrees") then
+--if not minetest.get_modpath("moretrees") then
 	dofile(modpath.."/rubber.lua")
-else
+--else
 	-- older versions of technic provided rubber trees regardless
-	minetest.register_alias("technic:rubber_sapling", "moretrees:rubber_tree_sapling")
-	minetest.register_alias("technic:rubber_tree_empty", "moretrees:rubber_tree_trunk_empty")
-end
+--	minetest.register_alias("technic:rubber_sapling", "moretrees:rubber_tree_sapling")
+--	minetest.register_alias("technic:rubber_tree_empty", "moretrees:rubber_tree_trunk_empty")
+--end
 
 -- mg suppport
 if minetest.get_modpath("mg") then
 	dofile(modpath.."/mg.lua")
 end
-
